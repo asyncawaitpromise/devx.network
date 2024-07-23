@@ -1,8 +1,8 @@
-import { createTalk, allTalks } from "../actions/talks"
+import { createTalk, getTalks } from "../actions/talks"
 import { type Talk } from "@/db/talks/types"
 
 export default async function Talk() {
-	const talks = await allTalks()
+	const talks = await getTalks()
 
 	return (
 		<main className="p-4">
