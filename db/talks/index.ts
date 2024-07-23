@@ -1,6 +1,4 @@
-import { revalidatePath } from "next/cache"
 import { Talk } from "./types"
-import { redirect } from "next/navigation"
 
 const db = require("better-sqlite3")("./talks.db")
 db.pragma("journal_mode = WAL")
@@ -36,8 +34,5 @@ export const talks = {
         VALUES (?, ?, ?)
         `
 		).run(description, speaker, title)
-
-		revalidatePath("/talk")
-		redirect("/talk")
 	}
 }
