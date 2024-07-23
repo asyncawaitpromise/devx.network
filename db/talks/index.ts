@@ -19,11 +19,11 @@ CREATE TABLE IF NOT EXISTS Talks (
 initialize()
 
 export const talks = {
-	async getAll() {
+	getAll() {
 		return db.prepare("SELECT * FROM talks").all() as Talk[]
 	},
 
-	async create(formData: FormData) {
+	create(formData: FormData) {
 		const description = formData.get("description")
 		const speaker = formData.get("speaker")
 		const title = formData.get("title")
