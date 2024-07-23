@@ -11,7 +11,7 @@ export default async function Talk() {
 				className="max-w-screen-md m-auto grid grid-cols-2 gap-2 text-lg p-2"
 				action={createTalk}
 			>
-				<input className="p-2" type="text" placeholder="Speaker Name" name="speaker" />
+				<input className="p-2" type="text" placeholder="Speaker Name" name="speaker" autoFocus />
 				<input className="p-2" type="text" placeholder="Talk Title" name="title" />
 				<textarea
 					className="p-2 col-span-2 resize-y"
